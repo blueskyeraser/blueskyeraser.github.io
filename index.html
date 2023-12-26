@@ -1,2 +1,173 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details</title>
+    <style>
+        body {
+            text-align: left; /* 设置整体内容左对齐 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #00BFFF;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #B6B6B6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #00BFFF;
+        }
+		#appScreenshots {
+			white-space: nowrap; 
+			overflow-x: auto;
+		}
+        div img {
+            max-width: 100%;
+			height: 200px;
+			margin:2px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #3408da;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+		
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #00BFFF;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="appName">Loading...</h1>
+    </header>
+
+    <section>
+        <img style='width:84px;height:84px' id="appIcon" src="#" alt="App Icon">
+
+        <h2>Description</h2>
+        <p id="appDescription">Loading...</p>
+
+        <h2>Screenshots</h2>
+        <div id="appScreenshots">
+            <!-- Screenshots will be dynamically added here -->
+        </div>
+
+        <h2>Contact Us</h2>
+        <p id="contactInfo">Loading...</p>
+
+        <a href="" id="downloadButton" class="download-button">Download Now</a>
+    </section>
+
+    <footer>
+        &copy; <span id='yearInfo'></span> <span id='teamInfo'></span>
+    </footer>
+
+    <script>
+        // JSON 数据直接在 <script> 标签内部定义
+        const config = {
+            "appName": "Blue Sky Eraser",
+            "appDescription": `This tool offers a range of features:
+
+1. Efficiently delete junk files, empty folders, and cache remnants from your phone.
+
+2. Identify apps with sensitive permissions for enhanced privacy control.
+
+3. Locate and manage duplicate photos, allowing you to clear unnecessary duplicates.
+
+4. Identify and manage large files consuming significant storage space.
+
+5. Streamline your app management by identifying and uninstalling rarely used applications.
+
+Explore even more features awaiting your discovery. Enjoy using our tool, and we wish you a seamless experience!`,
+            "appIcon": "https://play-lh.googleusercontent.com/Y0xtxRsJk0D1aKWrxTjplubx8fr_q1KMi5Xc0jLasmigFRTT5enXg3ZvPdBEfa608C-e=w240-h480",
+            "screenshots": [
+                "https://play-lh.googleusercontent.com/X0ETbAPwV5LKVcEw2SMt9wEurdPXTGabchaZ6yHlY97HfWK-i3nXTTkCXBXMKo9Tfsw=w526-h296-rw",
+                "https://play-lh.googleusercontent.com/dbjab17mLAau51PASst6kiTHDzk9auGxb45dYtyEGztkpEkDHIkZU1Su16rLvvcmeMQ=w526-h296-rw",
+				"https://play-lh.googleusercontent.com/FOjnJI7EYVWuzZqr7t9rK2qi7ijXdedh8RlUg3EFqIMHqSiLZXE71kClOaizb73QzQ_o=w526-h296-rw",
+				"https://play-lh.googleusercontent.com/lXPZB3-BzYhpsgk6VR1Z_uIFhrtmAbPZQLLwHS9FD2BamTKpg-fV5W2Ob__5kNaUEZU=w526-h296-rw"
+            ],
+            "contactInfo": "graychen1974@gmail.com",
+            "teamInfo": "GRAY CHEN",
+            "downloadUrl": "https://play.google.com/store/apps/details?id=com.blue.sky.tool.eraser"
+        };
+
+        // JavaScript to dynamically update content
+        document.title = config.appName;
+        document.getElementById('appName').innerHTML = config.appName;
+        document.getElementById('appDescription').innerText = config.appDescription;
+        document.getElementById('appIcon').src = config.appIcon;
+
+        const screenshotsContainer = document.getElementById('appScreenshots');
+        config.screenshots.forEach(screenshot => {
+            const img = document.createElement('img');
+            img.src = screenshot;
+            img.alt = 'Screenshot';
+            screenshotsContainer.appendChild(img);
+        });
+
+        document.getElementById('contactInfo').innerHTML = config.contactInfo;
+		
+        document.getElementById('downloadButton').href = config.downloadUrl;
+		
+		document.getElementById('yearInfo').innerHTML = new Date().getFullYear();
+
+        document.getElementById('teamInfo').innerText = config.teamInfo;
+    </script>
+</body>
+
 </html>
