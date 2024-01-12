@@ -1001,6 +1001,8 @@ pubmatic.com, 163075, RESELLER, 5d62403b186f2ace
 pubmatic.com, 163754, RESELLER, 5d62403b186f2ace
 gamaigroup.com, 423052, RESELLER
 ucfunnel.com, par-47BDB68D72764E2AFED767ED47DEDDA4, RESELLER
+admixer.net, 142f7ae2-b259-439a-801d-0b1146b8518d, DIRECT
+onetag.com, 8305cc299686700, RESELLER
 bigo.sg, 1113283, DIRECT
 
 #admob
