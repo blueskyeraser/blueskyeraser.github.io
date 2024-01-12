@@ -1007,4 +1007,4 @@ bigo.sg, 1113283, DIRECT
 google.com, pub-7198723900106474, DIRECT, f08c47fec0942fa0
 
 #facebook
-facebook.com, 194348083719996, DIRECT, c3e20eee3f780d68
+facebook.com, 1080368883007505, DIRECT, c3e20eee3f780d68
