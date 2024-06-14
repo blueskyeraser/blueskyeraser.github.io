@@ -1038,6 +1038,11 @@ emittenteeditoriale.it, AJxF6R130a9M6CaTvK, RESELLER
 digitalbloom.it, AJxF6R130a9M6CaTvK, RESELLER
 adform.com, 3164, RESELLER
 
+start.io, 115550145, DIRECT
+themediagrid.com, 6XGFYQ, DIRECT, 35d5010d7789b49d
+pubmatic.com, 163476, RESELLER, 5d62403b186f2ace
+pubmatic.com, 161162, RESELLER, 5d62403b186f2ace
+
 #admob
 google.com, pub-7198723900106474, DIRECT, f08c47fec0942fa0
 
